@@ -23,6 +23,8 @@ import javax.ws.rs.core.UriBuilder;
 import org.agoncal.application.petstore.model.Product;
 import org.agoncal.application.petstore.util.Loggable;
 
+import io.swagger.annotations.Api;
+
 /**
  * @author Antonio Goncalves
  *         http://www.antoniogoncalves.org
@@ -30,6 +32,7 @@ import org.agoncal.application.petstore.util.Loggable;
  */
 
 @Stateless
+@Api("product")
 @Path("/products")
 @Loggable
 public class ProductEndpoint

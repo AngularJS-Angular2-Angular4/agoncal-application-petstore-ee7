@@ -23,6 +23,8 @@ import javax.ws.rs.core.UriBuilder;
 import org.agoncal.application.petstore.model.Category;
 import org.agoncal.application.petstore.util.Loggable;
 
+import io.swagger.annotations.Api;
+
 /**
  * @author Antonio Goncalves
  *         http://www.antoniogoncalves.org
@@ -30,6 +32,7 @@ import org.agoncal.application.petstore.util.Loggable;
  */
 
 @Stateless
+@Api("category")
 @Path("/categories")
 @Loggable
 public class CategoryEndpoint

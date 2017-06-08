@@ -2,8 +2,8 @@ package org.agoncal.application.petstore.rest;
 
 import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;
-import java.util.HashSet;
-import java.util.Set;
+
+import io.swagger.jaxrs.config.BeanConfig;
 
 /**
  * @author Antonio Goncalves
@@ -30,4 +30,16 @@ public class RestApplication extends Application
 //      classes.add(ProductEndpoint.class);
 //      return classes;
 //   }
+	
+    public RestApplication() {
+        BeanConfig beanConfig = new BeanConfig();
+        beanConfig.setVersion("1.0.0");
+        beanConfig.setSchemes(new String[]{"http"});
+        beanConfig.setHost("localhost:8080");
+        beanConfig.setBasePath("/applicationPetstore/rest");
+        beanConfig.setResourcePackage("org.agoncal.application.petstore.rest");
+        beanConfig.setPrettyPrint(true);
+        beanConfig.setScan();
+    }
+	
 }
